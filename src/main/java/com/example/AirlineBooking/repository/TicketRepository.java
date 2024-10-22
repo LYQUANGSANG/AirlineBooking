@@ -9,4 +9,11 @@ import java.util.List;
 @Repository
 public interface TicketRepository extends JpaRepository<Ticket, String> {
     List<Ticket> findByFlight_FlightCode(String flightCode);
+
+    int countByFlight_FlightCodeAndIsCancelledTrue(String flightCode);
+
+    int countByFlight_FlightCode(String flightCode);
+
+    int countByIsCancelledTrue();
+
 }

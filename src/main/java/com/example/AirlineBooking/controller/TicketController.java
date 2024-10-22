@@ -56,7 +56,7 @@ public class TicketController {
     }
 
     // API lấy tất cả vé đã đặt
-    @GetMapping
+    @GetMapping("/all")
     public ResponseEntity<List<Ticket>> getAllTickets() {
         List<Ticket> tickets = ticketService.getAllTickets();
         return ResponseEntity.ok(tickets);

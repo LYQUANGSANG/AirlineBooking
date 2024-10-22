@@ -30,6 +30,8 @@ public class Ticket {
     @NotNull(message = "Booking time cannot be null")
     private LocalDateTime bookingTime;
 
+    private Boolean isCancelled;
+
     public @NotNull(message = "Ticket ID cannot be null") String getTicketId() {
         return ticketId;
     }
@@ -68,5 +70,13 @@ public class Ticket {
 
     public void setBookingTime(@NotNull(message = "Booking time cannot be null") LocalDateTime bookingTime) {
         this.bookingTime = bookingTime;
+    }
+
+    public Boolean getCancelled() {
+        return isCancelled;
+    }
+
+    public void setCancelled(Boolean cancelled) {
+        isCancelled = cancelled;
     }
 }
